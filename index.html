@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Spotify Song Project</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Fredoka & Nunito for super cute, playful vibes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        cute: {
+                            pink: '#ffb7c5',
+                            hotpink: '#ff69b4',
+                            lavender: '#e6c6ff',
+                            peach: '#ffd1dc',
+                            yellow: '#ffec99',
+                            mint: '#b2f2bb',
+                            blue: '#a5d8ff',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Cute floating & gentle bouncing animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(-1deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        
+        @keyframes pulseSparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            50% { transform: scale(1.25) rotate(15deg); opacity: 1; }
+        }
+
+        .animate-cute-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+
+        .animate-sparkle {
+            animation: pulseSparkle 2.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-pink-100 via-purple-100 to-yellow-100 min-h-screen font-sans text-slate-700 flex flex-col justify-between p-4 sm:p-6 select-none relative overflow-x-hidden">
+
+    <!-- Background cute decorative items -->
+    <div class="fixed top-8 left-6 text-pink-300 text-2xl animate-sparkle">✨</div>
+    <div class="fixed top-20 right-8 text-purple-300 text-3xl animate-cute-float" style="animation-delay: 1s;">🎵</div>
+    <div class="fixed bottom-12 left-8 text-yellow-300 text-3xl animate-cute-float" style="animation-delay: 2s;">🎶</div>
+    <div class="fixed bottom-16 right-6 text-pink-300 text-2xl animate-sparkle" style="animation-delay: 0.5s;">💖</div>
+
+    <!-- Top Badge Header -->
+    <header class="w-full max-w-sm mx-auto pt-2 pb-1 text-center relative z-10">
+        <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-md shadow-pink-200/50 border-2 border-pink-200">
+            <span class="text-pink-500 text-base animate-bounce">🎧</span>
+            <span class="text-xs font-bold tracking-wider text-pink-600 uppercase font-heading">My Spotify Music Journey</span>
+            <span class="text-pink-500 text-base animate-bounce">✨</span>
+        </div>
+    </header>
+
+    <!-- Main Cute Card Container -->
+    <main class="w-full max-w-sm mx-auto my-auto py-4 relative z-10">
+        <div class="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-6 sm:p-7 shadow-xl shadow-pink-200/60 border-4 border-pink-100 text-center relative">
+            
+            <!-- Cute Image Header: Guitar directly next to Mic -->
+            <div class="relative z-10 animate-cute-float mb-5">
+                <div class="w-56 h-56 mx-auto rounded-3xl bg-gradient-to-tr from-pink-200 via-purple-200 to-yellow-100 p-2 shadow-lg shadow-pink-200/50 border-4 border-white flex items-center justify-center relative overflow-hidden">
+                    <img 
+                        src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" 
+                        alt="Acoustic guitar standing next to studio microphone" 
+                        class="w-full h-full object-cover rounded-2xl shadow-inner border border-pink-100"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80';"
+                    />
+                </div>
+            </div>
+
+            <!-- Main Headline -->
+            <div class="relative z-10 mb-5">
+                <h1 class="text-lg sm:text-xl font-bold font-heading text-pink-600 leading-snug tracking-normal bg-pink-50/80 p-3.5 rounded-2xl border-2 border-dashed border-pink-200">
+                    I am creating a song and singing it myself and uploading it onto Spotify
+                </h1>
+            </div>
+
+            <!-- Problem Statement & Goal Sections -->
+            <div class="relative z-10 space-y-3 mb-6 text-left">
+                <!-- What to show Box -->
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-3.5 border-2 border-purple-100 flex items-start gap-3 shadow-sm">
+                    <div class="w-8 h-8 rounded-full bg-purple-200 text-purple-600 flex items-center justify-center shrink-0 font-bold text-sm">
+                        🌸
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-extrabold uppercase tracking-wider text-purple-400 font-heading">What to show</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-snug">
+                            I want my song to be really amazing by finding a beautiful melody and creating beautiful lyrics
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Problem statement Box -->
+                <div class="bg-gradient-to-r from-yellow-50 to-pink-50 rounded-2xl p-3.5 border-2 border-yellow-200/70 flex items-start gap-3 shadow-sm">
+                    <div class="w-8 h-8 rounded-full bg-yellow-200 text-yellow-700 flex items-center justify-center shrink-0 font-bold text-sm">
+                        🎀
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-extrabold uppercase tracking-wider text-yellow-600 font-heading">The problem it solves</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-snug">
+                            I want people to like the songs and share them with more people
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="relative z-10">
+                <button id="playBtn" onclick="handlePlayClick()" class="w-full bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 hover:from-pink-500 hover:to-purple-500 text-white font-heading font-bold py-3.5 px-6 rounded-full shadow-lg shadow-pink-300/60 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 text-base border-2 border-white cursor-pointer">
+                    <span id="btnIcon" class="text-lg">▶️</span>
+                    <span>play the song</span>
+                </button>
+            </div>
+
+            <!-- Cute Notification Toast -->
+            <div id="statusToast" class="hidden mt-4 p-3 bg-pink-500 text-white rounded-2xl text-xs font-bold items-center justify-center gap-2 shadow-md animate-bounce">
+                <span>✨ Song coming super soon! Thank you for supporting! 💖</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-sm mx-auto text-center py-2 relative z-10">
+        <p class="text-xs font-bold text-pink-400/80 font-heading">
+            Made with 💖 for Spotify
+        </p>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function handlePlayClick() {
+            const toast = document.getElementById('statusToast');
+            const btnIcon = document.getElementById('btnIcon');
+            
+            btnIcon.textContent = "⌛";
+            
+            setTimeout(() => {
+                btnIcon.textContent = "🎶";
+                toast.classList.remove('hidden');
+                toast.classList.add('flex');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
